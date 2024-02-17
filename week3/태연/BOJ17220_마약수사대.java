@@ -3,9 +3,13 @@ import java.util.*;
 
 class Node17220 {
 
+	int id;
 	ArrayList<Node17220> child = new ArrayList<Node17220>();
 	ArrayList<Node17220> parent = new ArrayList<Node17220>();
 
+	Node17220(int id){
+		this.id=id;
+	}
 
 	void cut() {
 		for(Node17220 p: parent)
@@ -34,7 +38,7 @@ class Node17220 {
 public class BOJ17220_마약수사대 {
 
 	Node17220[] nodes;
-	static Node17220 root = new Node17220();			// 0번노드 삭제를 위한 더미 루트
+	static Node17220 root = new Node17220(-1);			// 0번노드 삭제를 위한 더미 루트
 	static Queue<Node17220> q = new LinkedList<>();
 	
 	public static void main(String[] args) throws Exception {
@@ -42,12 +46,13 @@ public class BOJ17220_마약수사대 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 		int rel = Integer.parseInt(st.nextToken());
+		int v=0;
 		
 		Node17220[] nodes = new Node17220[n];
 
 
 		for (int i = 0; i < n; i++) {
-			nodes[i] = new Node17220();
+			nodes[i] = new Node17220(i);
 		}
 
 		for (int i = 0; i < rel; i++) {
@@ -80,7 +85,10 @@ public class BOJ17220_마약수사대 {
 			cnt++;
 
 			for (Node17220 node : cursor.child) {
-				q.add(node);
+				if((v&(1<<node.id))==0){
+					v|=(1<<node.id);
+					q.add(node);
+				}
 			}
 		}
 
