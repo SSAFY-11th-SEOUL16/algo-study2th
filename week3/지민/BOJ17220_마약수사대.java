@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 /**
  * 시간: 76ms
- * bfs
+ * dfs
  */
 
 public class BOJ17220_마약수사대 {
