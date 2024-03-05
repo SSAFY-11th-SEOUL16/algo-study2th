@@ -31,11 +31,11 @@ public class Solution_4014_활주로_건설 {
 				}
 			}
 			else if(height[i] < height[i + 1]) { // 오르막
-                for(int j = i; j > i - X; j--) {
-                	if(j < 0) return false;
-                    if(height[i] != height[j] || visited[j]) return false;
-                    visited[j] = true;
-                }
+		                for(int j = i; j > i - X; j--) {
+		                	if(j < 0) return false;
+		                	if(height[i] != height[j] || visited[j]) return false;
+		                	visited[j] = true;
+		                }
 			}
 		}
 		return true;
