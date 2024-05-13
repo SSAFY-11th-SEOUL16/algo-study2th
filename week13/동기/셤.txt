@@ -1,0 +1,51 @@
+sfc구성요소
+
+템플릿 스크립트 스타일 역할 적고 서술
+
+양방향 바인딩 -> v-model
+
+.lazy
+
+{{ 이거 div안이랑 밖에 있을때 테스트해볼것}}
+
+let name="홍싸피";
+lef info="이름: #{name}"; 
+이거 $랑 백틱으로 고치기
+
+mvvm 공부
+
+axios
+.get(path +"/" +emid.value)
+.ㅁ((response) -> (cemp.value = response.data))
+.ㅇ(() => alert("ㅇㄻㅇㄻㅇ"));
+
+ref() 함수
+
+
+메인페이지에서 다른페이지 ㄷ이동시 전역가드를 활용해 로그인 되어 있지않으면
+페이지 진입막고 로그인페이지로 이동시키려한다
+router._________)(to, from) => {}
+
+beforeach
+
+
+
+defineProps 역할 = 부모 컴포넌트에서 전달한 데이터를 자식 컴포넌트
+
+defineemits 
+
+$emit 찾아보기
+
+
+Vue 컴포지션 api 생명주기 훅
+onbeforemount
+
+onmounted
+
+onupdated
+
+onunmounted
+
+설명 틀린거
+
+
